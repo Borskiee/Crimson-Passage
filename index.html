@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dungeon Escape</title>
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Dungeon Escape</h1>
+<span class="explored">Rooms Explored 0/5</span>
+  <div class="dungeon" id="dungeon">
+    <button class="door">The Rusted Gate</button>
+    <button class="door">The Hollow Watch</button>
+    <button class="door">The Warden’s Keep</button>
+    <button class="door">The Black Altar</button>
+    <button class="door">The Knight's Wake</button>
+  </div>
+
+  <div class="boss-room">
+    <button class="door boss-door side-left disabled">Crypt of Screaming Souls</button>
+    <div class="spacer"></div>
+    <button class="door boss-door final-boss disabled">THE BLOODTIDE ASCENSION</button>
+    <div class="spacer"></div>
+    <button class="door boss-door side-right disabled">Hall of Shattered Vows</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
