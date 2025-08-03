@@ -1,31 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dungeon Escape</title>
-  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <h1>Dungeon Escape</h1>
-<span class="explored">Rooms Explored 0/5</span>
-  <div class="dungeon" id="dungeon">
-    <button class="door">The Rusted Gate</button>
-    <button class="door">The Hollow Watch</button>
-    <button class="door">The Warden’s Keep</button>
-    <button class="door">The Black Altar</button>
-    <button class="door">The Knight's Wake</button>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dungeon Escape</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Dungeon Escape</h1>
+    <span class="explored">Rooms Explored 0/5</span>
+    <div class="hp-bar">
+      <span class="hp">❤️HP: 100</span>
+    </div>
+    <div class="inventory">
+    <button class="inventory-icon-btn" aria-label="Inventory">
+  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
+    <path d="M6 7L9 2H15L18 7H19C20.1 7 21 7.9 21 9V20C21 21.1 20.1 22 19 22H5C3.9 22 3 21.1 3 20V9C3 7.9 3.9 7 5 7H6ZM12 4L10.2 7H13.8L12 4ZM12 13C13.1 13 14 12.1 14 11C14 9.9 13.1 9 12 9C10.9 9 10 9.9 10 11C10 12.1 10.9 13 12 13Z" />
+  </svg>
+</button>
+    </div>
+    <div class="dungeon" id="dungeon">
+      <button class="door">The Rusted Gate</button>
+      <button class="door">The Hollow Watch</button>
+      <button class="door">The Warden’s Keep</button>
+      <button class="door">The Black Altar</button>
+      <button class="door">The Knight's Wake</button>
+    </div>
 
-  <div class="boss-room">
-    <button class="door boss-door side-left disabled">Crypt of Screaming Souls</button>
-    <div class="spacer"></div>
-    <button class="door boss-door final-boss disabled">THE BLOODTIDE ASCENSION</button>
-    <div class="spacer"></div>
-    <button class="door boss-door side-right disabled">Hall of Shattered Vows</button>
+<div class="inventory-popup hidden" id="inventory">
+  <button class="inventory-close">✖</button>
+  <h2>Inventory</h2>
+  <div class="inventory-grid">
+    <div class="slot"></div>
+    <div class="slot"></div>
+    <div class="slot"></div>
+    <div class="slot"></div>
+    <div class="slot"></div>
+    <div class="slot"></div>
+    <div class="slot"></div>
+    <div class="slot"></div>
+    <div class="slot"></div>
   </div>
+</div>
 
-  <script src="script.js"></script>
-</body>
+    <div class="battle-overlay hidden">
+      <div class="battle-area">
+        <div class="player-status">
+          <div class="player-name">You</div>
+          <div class="player-hp-text">
+            HP: <span class="player-hp">100</span>
+          </div>
+        </div>
+        <div class="enemy-name">placeholder</div>
+        <div class="enemy-hp-text">
+          HP: <span class="enemy-hp">placeholder</span>
+        </div>
+
+        <div class="battle-buttons">
+          <button class="attack-btn normalAtk">🗡️ Quick Slash</button>
+          <button class="attack-btn skill disabled">🔥 Ember</button>
+
+          <div class="ultimate-row">
+            <button class="attack-btn ultimate-btn disabled">
+              🐦‍🔥 Devine Retribution
+            </button>
+            <div class="skill-points">
+              <span class="sp-dot filled"></span>
+              <span class="sp-dot"></span>
+              <span class="sp-dot"></span>
+              <span class="sp-dot"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="boss-room">
+      <button class="door boss-door side-left disabled">
+        Crypt of Screaming Souls
+      </button>
+      <div class="spacer"></div>
+      <button class="door boss-door final-boss disabled">
+        THE BLOODTIDE ASCENSION
+      </button>
+      <div class="spacer"></div>
+      <button class="door boss-door side-right disabled">
+        Hall of Shattered Vows
+      </button>
+    </div>
+
+<div class="win-popup hidden">
+  <div class="win-content">
+    <h2>You Are Victorious!</h2>
+    <p>The dungeon bows to your might.</p>
+    <button class="win-btn">Return to Title</button>
+  </div>
+</div>
+
+    <script src="script.js"></script>
+  </body>
 </html>

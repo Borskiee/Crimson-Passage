@@ -3,18 +3,27 @@ body {
   margin: 0;
   padding: 0;
   background-color: #0a0a0a;
-  background-image: 
-    linear-gradient(145deg, #0a0a0a, #111, #0d0d0d),
+  background-image: linear-gradient(145deg, #0a0a0a, #111, #0d0d0d),
     radial-gradient(circle at 20% 20%, rgba(255, 0, 0, 0.04), transparent 30%),
-    radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.035), transparent 40%),
-    radial-gradient(ellipse at center, rgba(255, 255, 255, 0.01), transparent 50%);
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(255, 215, 0, 0.035),
+      transparent 40%
+    ),
+    radial-gradient(
+      ellipse at center,
+      rgba(255, 255, 255, 0.01),
+      transparent 50%
+    );
   color: #eee;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
   overflow-x: hidden;
+
+ 
 }
 
 /* === TITLE === */
@@ -22,7 +31,7 @@ h1 {
   margin-top: 40px;
   font-size: 3rem;
   color: #f0c674;
-  font-family: 'MedievalSharp', cursive;
+  font-family: "MedievalSharp", cursive;
   text-align: center;
   letter-spacing: 2px;
   text-shadow: 0 0 5px #000, 0 0 10px #8b5a2b, 0 0 15px #d4af37;
@@ -30,11 +39,11 @@ h1 {
 }
 
 span {
-  font-family: 'MedievalSharp', cursive;
+  font-family: "MedievalSharp", cursive;
   margin-bottom: 15px;
   margin-top: -10px;
-    letter-spacing: 1px;
-   text-shadow: 0 0 5px #5f5c5c, 0 0 10px #50350cde, 0 0 15px #790a0a;
+  letter-spacing: 1px;
+  text-shadow: 0 0 5px #5f5c5c, 0 0 10px #50350cde, 0 0 15px #790a0a;
 }
 
 /* === ROOMS === */
@@ -52,7 +61,7 @@ span {
   width: 120px;
   height: 180px;
   margin: 20px;
-  font-family: 'MedievalSharp', cursive;
+  font-family: "MedievalSharp", cursive;
   font-size: 2vh;
   color: #e0d4b0;
   background: linear-gradient(to bottom, #4e342e, #3e2723);
@@ -66,11 +75,12 @@ span {
 
 .door:hover {
   transform: scale(1.05);
-  box-shadow: inset 0 0 14px rgba(255, 215, 0, 0.2), 0 6px 14px rgba(255, 223, 0, 0.4);
+  box-shadow: inset 0 0 14px rgba(255, 215, 0, 0.2),
+    0 6px 14px rgba(255, 223, 0, 0.4);
 }
 
 .door::before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 30px;
   right: 20px;
@@ -99,14 +109,15 @@ span {
   background: radial-gradient(ellipse at center, #1a0000 0%, #000 80%);
   border-top: 3px solid crimson;
   border-bottom: 3px solid crimson;
-  box-shadow: inset 0 0 80px crimson, 0 0 60px rgba(255, 0, 0, 0.3), 0 0 140px #520000;
+  box-shadow: inset 0 0 80px crimson, 0 0 60px rgba(255, 0, 0, 0.3),
+    0 0 140px #520000;
   overflow: hidden;
   z-index: 1;
 }
 
 /* Ritual circle */
 .boss-room::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 260px;
   height: 260px;
@@ -114,10 +125,12 @@ span {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 60, 0, 0.2) 20%, transparent 70%);
-  box-shadow:
-    0 0 40px rgba(255, 50, 0, 0.3),
-    0 0 60px rgba(255, 0, 0, 0.5),
+  background: radial-gradient(
+    circle,
+    rgba(255, 60, 0, 0.2) 20%,
+    transparent 70%
+  );
+  box-shadow: 0 0 40px rgba(255, 50, 0, 0.3), 0 0 60px rgba(255, 0, 0, 0.5),
     inset 0 0 40px rgba(255, 100, 0, 0.3);
   animation: fireSigil 4s infinite ease-in-out;
   z-index: 0;
@@ -127,18 +140,15 @@ span {
 }
 
 @keyframes fireSigil {
-  0%, 100% {
+  0%,
+  100% {
     transform: translate(-50%, -50%) scale(1);
-    box-shadow:
-      0 0 40px rgba(255, 50, 0, 0.3),
-      0 0 60px rgba(255, 0, 0, 0.5),
+    box-shadow: 0 0 40px rgba(255, 50, 0, 0.3), 0 0 60px rgba(255, 0, 0, 0.5),
       inset 0 0 40px rgba(255, 100, 0, 0.3);
   }
   50% {
     transform: translate(-50%, -50%) scale(1.05);
-    box-shadow:
-      0 0 80px rgba(255, 80, 0, 0.5),
-      0 0 100px rgba(255, 0, 0, 0.6),
+    box-shadow: 0 0 80px rgba(255, 80, 0, 0.5), 0 0 100px rgba(255, 0, 0, 0.6),
       inset 0 0 60px rgba(255, 120, 0, 0.4);
   }
 }
@@ -148,14 +158,15 @@ span {
   position: relative;
   width: 180px;
   height: 280px;
-  font-family: 'MedievalSharp', cursive;
+  font-family: "MedievalSharp", cursive;
   font-size: 2vh;
   color: #ffcccc;
   text-align: center;
   background: linear-gradient(to bottom, #3b0000, #0f0000);
   border: 4px double #cc0000;
   border-radius: 100px 100px 10px 10px;
-  box-shadow: 0 0 30px rgba(255, 0, 0, 0.6), 0 0 80px rgba(255, 0, 0, 0.3), inset 0 0 20px rgba(255, 30, 30, 0.3);
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.6), 0 0 80px rgba(255, 0, 0, 0.3),
+    inset 0 0 20px rgba(255, 30, 30, 0.3);
   cursor: pointer;
   z-index: 2;
   overflow: hidden;
@@ -165,7 +176,8 @@ span {
 
 .boss-door:hover {
   transform: scale(1.08);
-  box-shadow: 0 0 50px rgba(255, 0, 0, 0.8), 0 0 100px rgba(255, 0, 0, 0.4), inset 0 0 30px rgba(255, 50, 50, 0.5);
+  box-shadow: 0 0 50px rgba(255, 0, 0, 0.8), 0 0 100px rgba(255, 0, 0, 0.4),
+    inset 0 0 30px rgba(255, 50, 50, 0.5);
 }
 
 /* LEFT + RIGHT VARIANTS */
@@ -178,6 +190,10 @@ span {
   box-shadow: 0 0 10px crimson, inset 0 0 10px #550000;
 }
 
+.final-boss {
+  border-radius: 16px;
+}
+
 /* FINAL BOSS */
 .boss-door.final-boss {
   background: linear-gradient(to bottom, #000, #8f0707);
@@ -186,6 +202,334 @@ span {
   font-size: 1.3rem;
   padding: 20px 30px;
 }
+
+.battle-area {
+  width: 320px;
+  padding: 24px;
+  background: #1a1a1a;
+  border: 2px solid #700000;
+  border-radius: 16px;
+  box-shadow: 0 0 10px #220000 inset;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.player-status {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0f0f0f;
+  padding: 10px 16px;
+  border: 1px solid #550000;
+  border-radius: 10px;
+  box-shadow: 0 0 6px #300000;
+}
+
+.player-name {
+  font-size: 1.1rem;
+  color: #ffdddd;
+  font-weight: bold;
+}
+
+
+.player-hp-text {
+  font-size: 1rem;
+  color: #fa7878;
+}
+
+.enemy-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #e63946;
+  letter-spacing: 1px;
+}
+
+.enemy-hp-text {
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+  color: #f08e8e;
+}
+
+.battle-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.attack-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(to right, #400000, #7a1f1f);
+  color: #f1f1f1;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.attack-btn:hover {
+  background: linear-gradient(to right, #5a1a1a, #a12323);
+  transform: translateY(-1px);
+}
+
+.ultimate-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.ultimate-btn {
+  flex-grow: 1;
+  background: linear-gradient(to right, #8b0000, #ff1e1e);
+  color: #fff;
+}
+
+.skill-points {
+  display: flex;
+  gap: 4px;
+}
+
+.sp-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #222;
+  border: 1px solid #660000;
+}
+
+.sp-dot.filled {
+  background: #e60000;
+  border-color: #b30000;
+}
+
+.battle-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.win-popup {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 5, 5, 0.85);
+  backdrop-filter: blur(3px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+.win-content {
+  background: #1a1a1a url('https://www.transparenttextures.com/patterns/black-felt.png');
+  border: 3px solid #4d3b27;
+  padding: 50px 70px;
+  border-radius: 12px;
+  box-shadow: 0 0 25px #000, inset 0 0 10px #2c1c10;
+  text-align: center;
+  color: #e6decf;
+  animation: fadeInUp 0.6s ease-out;
+  font-family: "Garamond", serif;
+}
+
+.win-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 16px;
+  color: #f0e6d2;
+  text-shadow: 0 0 4px #000;
+  border-bottom: 2px solid #665544;
+  padding-bottom: 8px;
+  font-variant: small-caps;
+}
+
+.win-content p {
+  font-size: 1.15rem;
+  margin-bottom: 24px;
+  color: #d6c7b0;
+}
+
+.win-btn {
+  padding: 12px 26px;
+  font-size: 1rem;
+  background: linear-gradient(to bottom, #6a4d2b, #3d2b1f);
+  color: #fff2e0;
+  border: 2px solid #8c6d45;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 10px #1c1208;
+}
+
+.win-btn:hover {
+  background: linear-gradient(to bottom, #8c6d45, #5c4229);
+  transform: scale(1.05);
+  box-shadow: 0 0 14px #2a1a0f;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hp-bar {
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  padding: 6px 14px;
+  background: #1b1b1b url('https://www.transparenttextures.com/patterns/dark-leather.png');
+  border: 2px solid #3a0e0e;
+  border-radius: 8px;
+  box-shadow:
+    0 0 8px #000,
+    0 0 12px #6a0000,
+    inset 0 0 5px #000;
+}
+
+.hp-bar span {
+  font-family: "MedievalSharp", cursive;
+  font-size: 1.2rem;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.inventory {
+   position: absolute;
+  top: 4%;
+  right: 4%
+}
+
+.inventory-icon-btn {
+  background: #191312;
+  border: 2px solid #452313;
+  border-radius: 50%;
+  padding: 12px;
+  cursor: pointer;
+  color: #f4d8b4;
+  box-shadow:
+    inset 0 0 6px #000,
+    0 0 8px #8a2b2b,
+    0 0 3px #000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.inventory-icon-btn:hover {
+  transform: scale(1.08);
+  box-shadow:
+    0 0 14px #ff3e00,
+    0 0 6px #000;
+}
+
+.inventory-icon-btn:active {
+  transform: scale(0.95);
+  box-shadow:
+    inset 0 0 10px #000,
+    0 0 5px #300;
+}
+
+.inventory-icon-btn svg {
+  display: block;
+}
+
+.inventory-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  padding: 24px;
+  padding-right: 10px;
+  background: #1a1a1a url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+  border: 3px solid #502f1b;
+  border-radius: 12px;
+  box-shadow:
+    0 0 15px #000,
+    0 0 10px #a52a2a66;
+  color: #f3e4c7;
+  font-family: "MedievalSharp", cursive;
+  z-index: 1000;
+}
+
+.inventory-popup h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  text-align: center;
+  color: #ffe5b4;
+  text-shadow: 1px 1px 2px #000;
+  border-bottom: 1px solid #5a3e2b;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+}
+
+
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  width: 140px;
+  height: 140px;
+  background: #2e2e2e;
+  border: 2px solid #3d1f0f;
+  border-radius: 6px;
+  box-shadow:
+    inset 0 0 6px #000,
+    0 0 6px #500;
+  transition: background 0.2s ease;
+  text-shadow: 0 0 4px #000;
+}
+
+.slot:hover {
+  background: #3b2b1f;
+  cursor: pointer;
+}
+
+.inventory-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: #3b2b1f;
+  color: #ffe5b4;
+  border: 2px solid #5a3e2b;
+  border-radius: 50%;
+  font-size: 16px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 6px #000;
+  transition: background 0.2s, transform 0.2s;
+  padding-bottom: 3px;
+}
+
+.inventory-close:hover {
+  background: #502f1b;
+  transform: scale(1.1);
+}
+
+
 
 /* Important Stuffs */
 
@@ -203,3 +547,20 @@ span {
   opacity: 0.4;
   filter: grayscale(80%);
 }
+
+.disabled {
+   pointer-events: none;
+  opacity: 0.4;
+ filter: grayscale(80%); 
+}
+
+.ultimate-btn.disabled {
+   pointer-events: none;
+  opacity: 0.2;
+ filter: grayscale(80%); 
+}
+
+.hidden {
+  display: none !important;
+}
+
