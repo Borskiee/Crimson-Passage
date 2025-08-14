@@ -17,12 +17,13 @@
       <span class="hp">❤️HP: 100</span>
     </div>
     <div class="inventory">
-    <button class="inventory-icon-btn" aria-label="Inventory">
-  <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
-    <path d="M6 7L9 2H15L18 7H19C20.1 7 21 7.9 21 9V20C21 21.1 20.1 22 19 22H5C3.9 22 3 21.1 3 20V9C3 7.9 3.9 7 5 7H6ZM12 4L10.2 7H13.8L12 4ZM12 13C13.1 13 14 12.1 14 11C14 9.9 13.1 9 12 9C10.9 9 10 9.9 10 11C10 12.1 10.9 13 12 13Z" />
-  </svg>
-</button>
+      <button class="inventory-icon-btn" aria-label="Inventory">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26">
+          <path d="M6 7L9 2H15L18 7H19C20.1 7 21 7.9 21 9V20C21 21.1 20.1 22 19 22H5C3.9 22 3 21.1 3 20V9C3 7.9 3.9 7 5 7H6ZM12 4L10.2 7H13.8L12 4ZM12 13C13.1 13 14 12.1 14 11C14 9.9 13.1 9 12 9C10.9 9 10 9.9 10 11C10 12.1 10.9 13 12 13Z" />
+        </svg>
+      </button>
     </div>
+
     <div class="dungeon" id="dungeon">
       <button class="door">The Rusted Gate</button>
       <button class="door">The Hollow Watch</button>
@@ -31,21 +32,29 @@
       <button class="door">The Knight's Wake</button>
     </div>
 
-<div class="inventory-popup hidden" id="inventory">
-  <button class="inventory-close">✖</button>
-  <h2>Inventory</h2>
-  <div class="inventory-grid">
-    <div class="slot"></div>
-    <div class="slot"></div>
-    <div class="slot"></div>
-    <div class="slot"></div>
-    <div class="slot"></div>
-    <div class="slot"></div>
-    <div class="slot"></div>
-    <div class="slot"></div>
-    <div class="slot"></div>
-  </div>
-</div>
+    <div class="inventory-popup hidden" id="inventory">
+      <button class="inventory-close">✖</button>
+      <h2>Inventory</h2>
+      <div class="inventory-grid">
+        <div class="slot"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+        <div class="slot empty"></div>
+      </div>
+    </div>
+
+    <div class="use-item hidden">
+      <span class="span-item">placeholder</span>
+      <div class="item-btn-div">
+        <button class="use-itm">Use</button>
+        <button class="discard-item">Discard</button>
+      </div>
+    </div>
 
     <div class="battle-overlay hidden">
       <div class="battle-area">
@@ -66,7 +75,7 @@
 
           <div class="ultimate-row">
             <button class="attack-btn ultimate-btn disabled">
-              🐦‍🔥 Devine Retribution
+              🐦‍🔥 Divine Retribution
             </button>
             <div class="skill-points">
               <span class="sp-dot filled"></span>
@@ -80,26 +89,26 @@
     </div>
 
     <div class="boss-room">
-      <button class="door boss-door side-left disabled">
+      <button class="door boss-door side-left disabled" data-boss-index="0">
         Crypt of Screaming Souls
       </button>
       <div class="spacer"></div>
-      <button class="door boss-door final-boss disabled">
+      <button class="door boss-door final-boss disabled" data-boss-index="1">
         THE BLOODTIDE ASCENSION
       </button>
       <div class="spacer"></div>
-      <button class="door boss-door side-right disabled">
+      <button class="door boss-door side-right disabled" data-boss-index="2">
         Hall of Shattered Vows
       </button>
     </div>
 
-<div class="win-popup hidden">
-  <div class="win-content">
-    <h2>You Are Victorious!</h2>
-    <p>The dungeon bows to your might.</p>
-    <button class="win-btn">Return to Title</button>
-  </div>
-</div>
+    <div class="win-popup hidden">
+      <div class="win-content">
+        <h2>You Are Victorious!</h2>
+        <p>The dungeon bows to your might.</p>
+        <button class="win-btn">Return to Title</button>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>

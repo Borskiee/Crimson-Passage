@@ -43,7 +43,7 @@ span {
   margin-bottom: 15px;
   margin-top: -10px;
   letter-spacing: 1px;
-  text-shadow: 0 0 5px #5f5c5c, 0 0 10px #50350cde, 0 0 15px #790a0a;
+
 }
 
 /* === ROOMS === */
@@ -529,6 +529,76 @@ span {
   transform: scale(1.1);
 }
 
+.slot {
+  position: relative;
+  cursor: pointer;
+}
+
+.use-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #2d1f15;
+  border: 2px solid #a97d4f;
+  border-radius: 10px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 0 12px rgba(255, 221, 136, 0.3);
+  font-family: 'Cinzel', serif;
+  color: #f5e6c4;
+  max-width: fit-content;
+  z-index: 2000;
+}
+
+.span-item {
+   margin-top: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffeccc;
+}
+
+.item-btn-div {
+  display: flex;
+  gap: 10px;
+}
+
+.item-btn-div button {
+  padding: 6px 14px;
+  font-family: 'Cinzel', serif;
+  font-size: 13px;
+  color: #f5e6c4;
+  border: 2px solid;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-shadow: 0 1px 0 #000;
+  margin-top: -12px;
+}
+
+/* Green "Use" Button */
+.item-btn-div .use-itm {
+  background: linear-gradient(to bottom, #2f5e2f, #1a331a);
+  border-color: #6bcf6b;
+}
+
+.item-btn-div .use-itm:hover {
+  background: linear-gradient(to bottom, #3c7d3c, #204020);
+}
+
+/* Red "Discard" Button */
+.item-btn-div .discard-item {
+  background: linear-gradient(to bottom, #4a1e1e, #2b0f0f);
+  border-color: #a94444;
+}
+
+.item-btn-div .discard-item:hover {
+  background: linear-gradient(to bottom, #6a2a2a, #3a1111);
+}
+
 
 
 /* Important Stuffs */
@@ -564,3 +634,14 @@ span {
   display: none !important;
 }
 
+.red {
+  color: crimson;
+}
+
+.green {
+  color: rgb(3, 230, 3)
+}
+
+.blue {
+  color: rgb(8, 81, 240);
+}
